@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TimeSpiner">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>1h</item>
+        <item>12h</item>
+        <item>one day</item>
+        <item>three day</item>
+        <item>one week</item>
+        <item>one month</item>
+    </string-array>
+</resources>

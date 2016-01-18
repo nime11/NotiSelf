@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="si.poljansek.lenart.notiself.SetEvent"
+    tools:showIn="@layout/activity_set_event">
+
+    <si.poljansek.lenart.notiself.DateDisplayPicker
+        android:id="@+id/clientEditCreate_BirthDateDayPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Spinner"
+        android:hint="Date"
+        android:layout_below="@+id/textViewDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+  <si.poljansek.lenart.notiself.TimeDisplayPicker
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@android:style/Widget.Holo.Spinner"
+      android:hint="Time"
+      android:id="@+id/view"
+      android:layout_below="@+id/textViewTime"
+      android:layout_alignLeft="@+id/textViewDate"
+      android:layout_alignStart="@+id/textViewDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Date"
+        android:id="@+id/textViewDate"
+        android:layout_below="@+id/editTextEvent"
+        android:layout_alignRight="@+id/textViewTime"
+        android:layout_alignEnd="@+id/textViewTime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Time"
+        android:id="@+id/textViewTime"
+        android:layout_below="@+id/clientEditCreate_BirthDateDayPicker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Event:"
+        android:id="@+id/textViewEventText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextEvent"
+        android:layout_below="@+id/textViewEventText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/clientEditCreate_BirthDateDayPicker"
+        android:layout_alignEnd="@+id/clientEditCreate_BirthDateDayPicker" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:id="@+id/buttonNext"
+        android:layout_marginBottom="112dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/clientEditCreate_BirthDateDayPicker"
+        android:layout_alignEnd="@+id/clientEditCreate_BirthDateDayPicker"
+        android:onClick="" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/TimeSpiner"
+        android:spinnerMode="dropdown"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Alert"
+        android:id="@+id/textViewAlert"
+        android:layout_below="@+id/view"
+        android:layout_alignLeft="@+id/view"
+        android:layout_alignStart="@+id/view"
+        android:layout_above="@+id/spinner"
+        android:layout_alignRight="@+id/textViewEventText"
+        android:layout_alignEnd="@+id/textViewEventText" />
+</RelativeLayout>
